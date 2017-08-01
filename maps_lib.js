@@ -168,7 +168,6 @@
         tab1.innerHTML = content;
 
         infoBubble.addTab('Info', tab1);
-        infoBubble.addTab('Street View', "");
         infoBubble.addTab('Update', form);
 
         if (!infoBubble.isOpen()) {
