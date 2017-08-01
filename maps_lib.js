@@ -52,7 +52,7 @@
     this.myOptions = {
       zoom: this.defaultZoom,
       center: this.map_centroid,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeId: google.maps.MapTypeId.SATELLITE,
       maxZoom: 23,
       minZoom: 18,
       scrollwheel: false,
@@ -261,9 +261,7 @@
         '<b>Roof Material: </b>' + type + '</br>' +
         '<b>Siding Material: </b>' + ladder + '</br>' +
         '<b>Location: </b>' + coordinates + '</br>' +
-        '<b>Last Updated: </b>' + date + '</p>' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image1 + ' style="float:left;width:250px;height:200px;">' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image2 + ' style="float:right;width:250px;height:200px;">';
+        '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
     }
@@ -315,9 +313,7 @@
         '<b>Canopy Base Height: </b>' + cbh + '</br>' +
         '<b>Ladder: </b>' + ladder + '</br>' +
         '<b>Location: </b>' + coordinates + '</br>' +
-        '<b>Last Updated: </b>' + date + '</p>' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image1 + ' style="width:250px;height:200px;">' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image2 + ' style="width:250px;height:200px;">'
+        '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
     }
@@ -352,9 +348,7 @@
         '<b>Species: </b>' + species + '</br>' +
         '<b>Manivured: </b>' + fuel + '</br>' +
         '<b>Location: </b>' + coordinates + '</br>' +
-        '<b>Last Updated: </b>' + date + '</p>'
-      '<IMG BORDER="0" ALIGN="Center" SRC=' + image1 + ' style="width:250px;height:200px;">' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image2 + ' style="width:250px;height:200px;">'
+        '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
     }
