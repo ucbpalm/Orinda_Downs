@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  
+
+<head>
+  <title>WUI@UCB</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="main.css">
+  <script src="https://use.fontawesome.com/870ef91e4d.js"></script>
+</head>
+
+<body class="index">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+      <h1><a href="index.html">WUI Fire Study<span> by UC Berkeley</span></a></h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="current"><a href="map.html">Map</a></li>
+          <li><a href="proposal.html">About</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+
+      <!--
+						".inner" is set up as an inline-block so it automatically expands
+						in both directions to fit whatever's inside it. This means it won't
+						automatically wrap lines, so be sure to use line breaks where
+						appropriate (<br />).
+					-->
+      <div class="inner">
+        
+        <header>
+          <h2>Map<span class="icon fa-map-marker" id='find_me' href='#'></span></h2>
+        </header>
+       <h4>Address (<a id='find_me' href='#'>find me</a>)</h4>
+              <p>
+                <input class='form-control' id='search_address' placeholder='Enter an address' type='text' />
+              </p>
+
+
+              <a href='#' class="button small scrolly" id = 'search'>Search</a>
+
+              <a href='#' class="button small scrolly" id = 'reset'>Reset</a>
+
+      </div>
+
+    </section>
+
+    <!-- One -->
+
+    <section class='container-fluid'>
+   <div id='map_canvas'></div>
+   </section>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="copyright">
+        <li>&copy; Untitled</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="jquery.min.js"></script>
+  <script src="jquery.dropotron.min.js"></script>
+  <script src="jquery.scrolly.min.js"></script>
+  <script src="jquery.scrollgress.min.js"></script>
+  <script src="skel.min.js"></script>
+  <script src="util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="main.js"></script>
+  <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.address.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=AIzaSyAR5eeFETe-sMigouZtPABzHpyA02MGyjQ"></script>
+  <script type="text/javascript" src="markerclusterer.js"></script>
+  <script type="text/javascript" src="infobubble.js"></script>
+  <script type="text/javascript" src="maps_lib.js"></script>
+  <script type='text/javascript'>
+    //<![CDATA[
+    $(window).resize(function() {
+      var h = $(window).height(),
+        offsetTop = 105; // Calculate the top offset
+
+      $('#map_canvas').css('height', (h - offsetTop));
+    }).resize();
+
+    $(function() {
+      var myMap = new MapsLib({
+
+        centroidsFusionTableId: "1SB0MbRfCjnY8rh3HQ0bQ_Jv1gpd0wBT4ohn3VeB9",
+        treesFusionTableId: "139GrJAFghvmniS64HTGouebkKIvpHka2uVbMOv6B",
+        shrubsFusionTableId: "1iBycVSXbm8rh7bpMjBU03g5r-pliMcmpG9hYRMYq",
+        buildingsFusionTableId: "11pU1kmMytcB8VeYz0Amu5RdZGA-3R9yxmvS7lynr",
+        greenspaceFusionTableId: "1HAmH_jDdV2ZYB32vT3jurNme1h12fJMM7PIjpWww",
+        poolsFusionTableId: "1UJ6BRBLHTBNjLLzO4sPWT-ZR_DKEY6757XYAKzDe",
+
+        googleApiKey: "AIzaSyBIJU-Na0ZdzgkC7DHJAHXrqGOblt3yzpE",
+        locationColumn: "geometry",
+        map_center: [37.91, -122.166],
+        locationScope: "Orinda, CA"
+
+
+
+      });
+      var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
+
+      $(':checkbox').click(function() {
+        myMap.doSearch();
+      });
+      $(':radio').click(function() {
+        myMap.doSearch();
+      });
+      $('#search_radius').change(function() {
+        myMap.doSearch();
+      });
+
+      $('#search').click(function() {
+        myMap.doSearch();
+      });
+
+      $('#find_me').click(function() {
+        myMap.findMe();
+        return false;
+      });
+
+      $('#reset').click(function() {
+        myMap.reset();
+        return false;
+      });
+
+      $(":text").keydown(function(e) {
+        var key = e.keyCode ? e.keyCode : e.which;
+        if (key === 13) {
+          $('#search').click();
+          return false;
+        }
+      });
+    });
+    //]]>
+  </script>
+</body>
+
+</html>
