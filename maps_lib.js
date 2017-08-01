@@ -55,7 +55,7 @@
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       maxZoom: 23,
       minZoom: 18,
-      scrollwheel: true,
+      scrollwheel: false,
       draggable: true,
     };
     this.geocoder = new google.maps.Geocoder();
