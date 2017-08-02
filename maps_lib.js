@@ -254,7 +254,7 @@
         image2 = "https://bcourses.berkeley.edu/courses/1456246/files/70229328/preview";
       }
       //customForm = "https://docs.google.com/forms/d/1DoB3mJpcMMA8NRV9BlHkdxm_EM9kVSsyyz6oh7-GN6U";
-      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSfUR5Yq6d7x0qEXnnLfofYfWc64OEQxyFyV62ojnqNwp0VEWw/viewform?usp=pp_url&entry.643375635="+ coordinates +"&entry.1345089004&entry.95699849&entry.1534486865"";
+      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSfUR5Yq6d7x0qEXnnLfofYfWc64OEQxyFyV62ojnqNwp0VEWw/viewform?usp=pp_url&entry.643375635="+ coordinates +"&entry.1345089004&entry.95699849&entry.1534486865";
 
       content = '<h2>' + fuel + '</h2>' +
         '<p>' +
@@ -335,7 +335,7 @@
       image1 = "https://bcourses.berkeley.edu/courses/1456246/files/70229321/preview";
       image2 = "";
       //customForm = "https://docs.google.com/forms/d/1Zwtl1HclR-n6zZd6pyPFEoOBEWq7d5hmP4l2NktYQFU";
-      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSfUR5Yq6d7x0qEXnnLfofYfWc64OEQxyFyV62ojnqNwp0VEWw/viewform?usp=pp_url&entry.643375635="+ coordinates +"&entry.1345089004&entry.95699849&entry.1534486865"";
+      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSfUR5Yq6d7x0qEXnnLfofYfWc64OEQxyFyV62ojnqNwp0VEWw/viewform?usp=pp_url&entry.643375635="+ coordinates +"&entry.1345089004&entry.95699849&entry.1534486865";
 
       content =
 
