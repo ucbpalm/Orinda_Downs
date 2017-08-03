@@ -135,8 +135,8 @@
         borderWidth: 1,
         maxWidth: 600,
         minWidth: 600,
-        maxHeight: 600,
-        minHeight: 600,
+        maxHeight: 300,
+        minHeight: 300,
         arrowSize: 15,
       });
 
