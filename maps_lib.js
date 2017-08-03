@@ -52,10 +52,10 @@
     this.myOptions = {
       zoom: this.defaultZoom,
       center: this.map_centroid,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeId: google.maps.MapTypeId.SATELLITE,
       maxZoom: 23,
       minZoom: 18,
-      scrollwheel: true,
+      scrollwheel: false,
       draggable: true,
     };
     this.geocoder = new google.maps.Geocoder();
@@ -168,7 +168,6 @@
         tab1.innerHTML = content;
 
         infoBubble.addTab('Info', tab1);
-        infoBubble.addTab('Street View', "");
         infoBubble.addTab('Update', form);
 
         if (!infoBubble.isOpen()) {
@@ -255,16 +254,14 @@
         image2 = "https://bcourses.berkeley.edu/courses/1456246/files/70229328/preview";
       }
       //customForm = "https://docs.google.com/forms/d/1DoB3mJpcMMA8NRV9BlHkdxm_EM9kVSsyyz6oh7-GN6U";
-      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSdKhOlCDW_wS9FA0k5ePIf_putFZ7LLZXzEkcMb_xLj8vmN3A/viewform?usp=pp_url&entry.2042979777=" + coordinates + "&entry.1201875768&entry.1677653360&entry.1231968907";
+      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSfUR5Yq6d7x0qEXnnLfofYfWc64OEQxyFyV62ojnqNwp0VEWw/viewform?usp=pp_url&entry.643375635="+ coordinates +"&entry.1345089004&entry.95699849&entry.1534486865";
 
       content = '<h2>' + fuel + '</h2>' +
         '<p>' +
         '<b>Roof Material: </b>' + type + '</br>' +
         '<b>Siding Material: </b>' + ladder + '</br>' +
         '<b>Location: </b>' + coordinates + '</br>' +
-        '<b>Last Updated: </b>' + date + '</p>' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image1 + ' style="float:left;width:250px;height:200px;">' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image2 + ' style="float:right;width:250px;height:200px;">';
+        '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
     }
@@ -316,9 +313,7 @@
         '<b>Canopy Base Height: </b>' + cbh + '</br>' +
         '<b>Ladder: </b>' + ladder + '</br>' +
         '<b>Location: </b>' + coordinates + '</br>' +
-        '<b>Last Updated: </b>' + date + '</p>' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image1 + ' style="width:250px;height:200px;">' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image2 + ' style="width:250px;height:200px;">'
+        '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
     }
@@ -342,7 +337,7 @@
       image1 = "https://bcourses.berkeley.edu/courses/1456246/files/70229321/preview";
       image2 = "";
       //customForm = "https://docs.google.com/forms/d/1Zwtl1HclR-n6zZd6pyPFEoOBEWq7d5hmP4l2NktYQFU";
-      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSfPnrIBB222DKTOkxHaTfcc6kh6tEDXLS1xlpFZKWN3UkzikQ/viewform?usp=pp_url&entry.1534516827=" + coordinates + "&entry.1581414144&entry.1922316849&entry.1509144985";
+      customForm = "https://docs.google.com/forms/d/e/1FAIpQLSfUR5Yq6d7x0qEXnnLfofYfWc64OEQxyFyV62ojnqNwp0VEWw/viewform?usp=pp_url&entry.643375635="+ coordinates +"&entry.1345089004&entry.95699849&entry.1534486865";
 
       content =
 
@@ -353,9 +348,7 @@
         '<b>Species: </b>' + species + '</br>' +
         '<b>Manivured: </b>' + fuel + '</br>' +
         '<b>Location: </b>' + coordinates + '</br>' +
-        '<b>Last Updated: </b>' + date + '</p>'
-      '<IMG BORDER="0" ALIGN="Center" SRC=' + image1 + ' style="width:250px;height:200px;">' +
-        '<IMG BORDER="0" ALIGN="Center" SRC=' + image2 + ' style="width:250px;height:200px;">'
+        '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
     }
@@ -374,11 +367,6 @@
     }
 
   
-    function street_view(coordinates) {
-      
-      
-      
-    }
 
     self.trees = new google.maps.FusionTablesLayer({
       query: {
