@@ -2345,7 +2345,7 @@ input[type="reset"].small,
 #banner {
   background-attachment: scroll, scroll, scroll, scroll;
   /*index_cover_image*/
-  background-image: orinda_banner.jpeg;
+  background-image: url("http://www.cityoforinda.org/ImageRepository/Document?documentID=774");
   background-position: center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: cover, cover, cover, cover;
