@@ -259,8 +259,6 @@
       content = '<h2>' + fuel + '</h2>' +
         '<p>' +
         '<b>Roof Material: </b>' + type + '</br>' +
-        '<b>Siding Material: </b>' + ladder + '</br>' +
-        '<b>Location: </b>' + coordinates + '</br>' +
         '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
@@ -310,9 +308,6 @@
         '<b>Status: </b>' + health + '</br>' +
         '<b>Type: </b>' + type + '</br>' +
         '<b>Species: </b>' + species + '</br>' +
-        '<b>Canopy Base Height: </b>' + cbh + '</br>' +
-        '<b>Ladder: </b>' + ladder + '</br>' +
-        '<b>Location: </b>' + coordinates + '</br>' +
         '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
@@ -346,8 +341,6 @@
         '<b>Status: </b>' + health + '</br>' +
         '<b>Type: </b>' + type + '</br>' +
         '<b>Species: </b>' + species + '</br>' +
-        '<b>Manivured: </b>' + fuel + '</br>' +
-        '<b>Location: </b>' + coordinates + '</br>' +
         '<b>Last Updated: </b>' + date + '</p>';
       form = '<iframe src="' + customForm + '/viewform?embedded=true" width="575" height="575" >Loading...</iframe></br>';
       return [content, form];
