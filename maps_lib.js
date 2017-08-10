@@ -55,7 +55,7 @@
       mapTypeId: google.maps.MapTypeId.SATELLITE,
       maxZoom: 23,
       minZoom: 18,
-      scrollwheel: false,
+      scrollwheel: true,
       draggable: true,
     };
     this.geocoder = new google.maps.Geocoder();
@@ -135,8 +135,8 @@
         borderWidth: 1,
         maxWidth: 600,
         minWidth: 600,
-        maxHeight: 300,
-        minHeight: 300,
+        maxHeight: 600,
+        minHeight: 600,
         arrowSize: 15,
       });
 
